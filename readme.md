@@ -1,1 +1,1 @@
-![BAM](https://raw.githubusercontent.com/supercrabtree/bam-pow/master/media/bam-pow-header.svg)
+![BAM](http://supercrabtree.github.io/media/bam-pow-header.svg)
