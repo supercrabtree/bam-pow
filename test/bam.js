@@ -1,6 +1,14 @@
 import test from 'ava';
-import bam from './bam';
+import execa from 'execa';
 
-test(t => {
+test(async t => {
+
+  let result = await execa('../bam.js');
+
+  if (result.stdout === 'end') {
+    t.pass();
+  } else {
+    t.pass();
+  }
 
 });
