@@ -1,0 +1,29 @@
+{
+  "name": "bam-pow",
+  "version": "0.0.0",
+  "description": "Worlds fastest prototypes in any language, or your money back.",
+  "bin": {
+    "bam": "bam.js",
+    "pow": "pow.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "ava",
+    "start": "ava --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supercrabtree/bam-pow.git"
+  },
+  "keywords": [],
+  "author": "George Crabtree <supercrabtree@googlemail.com> (https://github.com/supercrabtree)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supercrabtree/bam-pow/issues"
+  },
+  "homepage": "https://github.com/supercrabtree/bam-pow#readme"
+}
