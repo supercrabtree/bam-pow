@@ -19,3 +19,11 @@ test(async t => {
   console.log(result.stdout);
 
 });
+
+
+test.after(t => {
+
+  const dummyBamDir = path.join(__dirname, 'helpers', 'bam-dir');
+  fs.remove(dummyBamDir);
+
+});
