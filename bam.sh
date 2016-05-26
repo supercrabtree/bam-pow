@@ -14,16 +14,25 @@ bam() {
     echo "$nouns" | awk 'BEGIN { FS = ","; srand(); } ; { print $"'"$INDEX"'" }'
   }
 
-  while true; do
+  if [ $1 ]; then
 
-    adjective=$(random_adjective);
-    noun=$(random_noun);
+    newBamDir="$BAM_DIR/$1"
+    test -d $newBamDir && echo "sorry, that already exists: $newBamDir" >&2 && return 1
 
-    newBam="$adjective-$noun"
-    newBamDir="$BAM_DIR/$newBam"
+  else
 
-    test -d $newBamDir || break
-  done
+    while true; do
+
+      adjective=$(random_adjective);
+      noun=$(random_noun);
+
+      newBam="$adjective-$noun"
+      newBamDir="$BAM_DIR/$newBam"
+
+      test -d $newBamDir || break
+    done
+
+  fi
 
   mkdir -p $newBamDir
 
