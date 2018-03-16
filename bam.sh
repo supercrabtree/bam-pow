@@ -14,9 +14,11 @@ bam() {
     echo "$nouns" | awk 'BEGIN { FS = ","; srand(); } ; { print $'"$INDEX"' }'
   }
 
+  dateStr=$(date '+%A-%d-%h-%Y')
+
   if [ $1 ]; then
 
-    newBamDir="$BAM_DIR/$1"
+    newBamDir="$BAM_DIR/$dateStr/$1"
     test -d $newBamDir && echo "Already exists: $newBamDir" >&2 && return 1
 
   else
@@ -27,7 +29,7 @@ bam() {
       noun=$(random_noun);
 
       newBam="$adjective-$noun"
-      newBamDir="$BAM_DIR/$newBam"
+      newBamDir="$BAM_DIR/$dateStr/$newBam"
 
       test -d $newBamDir || break
     done
