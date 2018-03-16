@@ -17,7 +17,7 @@ bam() {
   if [ $1 ]; then
 
     newBamDir="$BAM_DIR/$1"
-    test -d $newBamDir && echo "sorry, that already exists: $newBamDir" >&2 && return 1
+    test -d $newBamDir && echo "Already exists: $newBamDir" >&2 && return 1
 
   else
 
